@@ -1,0 +1,14 @@
+---
+import Layout from "../components/layout.astro"
+
+const cursos = await Astro.glob('./cursos/*.md')
+---
+
+<Layout pageTitle ='Cursos' pageDesscriptions="Pagina de lo ultimo en frameworks y noticias">
+    <h1>Blog</h1>
+    {
+        cursos.map(curso=> {
+            return <a href={curso.url}>{curso.frontmatter.title}</a>
+        })
+    }
+</Layout>

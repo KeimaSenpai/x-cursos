@@ -1,0 +1,30 @@
+---
+interface Props {
+    pageTitle?: string;
+    pageDesscriptions?: string
+}
+const {pageTitle, pageDesscriptions} = Astro.props 
+import Nav from '../components/navegacion.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>X Cursos | {pageTitle} </title>
+    <meta name="description" content={pageDesscriptions}>
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:image" content="/x-cursos.jpg" >
+    <meta property="og:title" content="X Cursos | Aprende un poco cada día">
+    <meta property="og:description" content="X Cursos la mejor pagina para descargar tus cursos de manera gratuita">
+</head>
+<body>
+    <Nav></Nav>
+    <slot/>
+</body>
+</html>
