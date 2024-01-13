@@ -1,14 +1,35 @@
 ---
-import Layout from "../components/layout.astro"
+import Layout from "../components/layout.astro";
 
-const cursos = await Astro.glob('./cursos/*.md')
+const cursos = await Astro.glob("./cursos/*.md");
 ---
 
-<Layout pageTitle ='Cursos' pageDesscriptions="Pagina de lo ultimo en frameworks y noticias">
-    <h1>Blog</h1>
-    {
-        cursos.map(curso=> {
-            return <a href={curso.url}>{curso.frontmatter.title}</a>
-        })
-    }
+<Layout
+    pageTitle="Cursos"
+    pageDesscriptions="Pagina de lo ultimo en frameworks y noticias"
+>
+    <h1>Cursos</h1>
+    <article class="cursos-flex">
+        {
+            cursos.map((curso) => {
+                return (
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src={curso.frontmatter.image} alt="" />
+                        </div>
+                        <a class="card-title" href={curso.url} class="targuet">
+                            {curso.frontmatter.title}
+                        </a>
+                        <p class="card-des">{curso.frontmatter.description}</p>
+                        <div class="btn-tag">
+                            <p class="tag">{curso.frontmatter.categoria}</p>
+                            <a class="btn" href={curso.url}>
+                                Ver curso
+                            </a>
+                        </div>
+                    </div>
+                );
+            })
+        }
+    </article>
 </Layout>
