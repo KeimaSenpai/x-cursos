@@ -11,11 +11,11 @@ const cursos = await Astro.glob("./cursos/*.md");
     <nav class="categoria">
         <h1>CATEGORIAS</h1>
         <div id=" myBtnContainer" class="flex">
-            <button class="active-btn">Programación</button>
+            <button class="active btn">All</button>
+            <button class="btn">Programación</button>
             <button class="btn">Diseño</button>
             <button class="btn">Modelado 3D</button>
             <button class="btn">Electrónica</button>
-            <button class="btn"></button>
         </div>
     </nav>
     <article class="cursos-flex">
@@ -32,7 +32,7 @@ const cursos = await Astro.glob("./cursos/*.md");
                         <p class="card-des">{curso.frontmatter.description}</p>
                         <div class="btn-tag">
                             <p class="tag">{curso.frontmatter.categoria}</p>
-                            <a class="btn" href={curso.url}>
+                            <a class="btn-card" href={curso.url}>
                                 Ver curso
                             </a>
                         </div>
