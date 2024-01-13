@@ -3,6 +3,8 @@
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
+    text-transform: none;
+    color: #ffffff;
 }
 
 body {
@@ -23,8 +25,17 @@ body {
     gap: 20px;
 }
 
-.glass{
+.glass {
     background: #111111bb;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+/* ------------Estilos Generales-------------- */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }

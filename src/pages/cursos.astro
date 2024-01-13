@@ -8,7 +8,16 @@ const cursos = await Astro.glob("./cursos/*.md");
     pageTitle="Cursos"
     pageDesscriptions="Pagina de lo ultimo en frameworks y noticias"
 >
-    <h1>Cursos</h1>
+    <nav class="categoria">
+        <h1>CATEGORIAS</h1>
+        <div id=" myBtnContainer" class="flex">
+            <button class="active-btn">Programación</button>
+            <button class="btn">Diseño</button>
+            <button class="btn">Modelado 3D</button>
+            <button class="btn">Electrónica</button>
+            <button class="btn"></button>
+        </div>
+    </nav>
     <article class="cursos-flex">
         {
             cursos.map((curso) => {
