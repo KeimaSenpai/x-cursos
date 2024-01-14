@@ -8,7 +8,7 @@ const cursos = await Astro.glob("./cursos/*.md");
     pageTitle="Cursos"
     pageDesscriptions="Pagina de lo ultimo en frameworks y noticias"
 >
-    <nav class="categoria">
+    <section class="categoria">
         <h1>CATEGORIAS</h1>
         <div id=" myBtnContainer" class="flex">
             <button class="active btn">All</button>
@@ -17,7 +17,7 @@ const cursos = await Astro.glob("./cursos/*.md");
             <button class="btn">Modelado 3D</button>
             <button class="btn">Electrónica</button>
         </div>
-    </nav>
+    </section>
     <article class="cursos-flex">
         {
             cursos.map((curso) => {

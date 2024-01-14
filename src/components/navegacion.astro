@@ -1,10 +1,124 @@
-<nav class="navegacion glass">
-    <h1>X</h1>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="cursos">Cursos</a></li>
-        <li><a href="blog">Blog</a></li>
-        <li><a href="recursos">Recursos</a></li>
-        <li><a href="acercade">Acerca de</a></li>
+<nav class="navegacion-nav">
+    <ul class="navbar-container">
+        <li class="navbar-item logo">
+            <a href="/" class="navbar-link"
+                ><img src="/logo.webp" /><span class="link-text">Home</span></a
+            >
+        </li>
+
+        <li class="navbar-item">
+            <a href="/" class="navbar-link"
+                ><img src="/imgs/home.png" /><span class="link-text">Home</span
+                ></a
+            >
+        </li>
+
+        <li class="navbar-item">
+            <a href="cursos" class="navbar-link"
+                ><img src="/imgs/bookmark.png" /><span class="link-text"
+                    >Home</span
+                ></a
+            >
+        </li>
+
+        <li class="navbar-item">
+            <a href="blog" class="navbar-link"
+                ><img src="/imgs/blog.png" /><span class="link-text">Home</span
+                ></a
+            >
+        </li>
+
+        <li class="navbar-item">
+            <a href="recursos" class="navbar-link"
+                ><img src="/imgs/recursos.png" /><span class="link-text"
+                    >Home</span
+                ></a
+            >
+        </li>
+
+        <li class="navbar-item">
+            <a href="acercade" class="navbar-link"
+                ><img src="/imgs/info.png" /><span class="link-text">Home</span
+                ></a
+            >
+        </li>
     </ul>
 </nav>
+
+<!--   Navegación  -->
+<style>
+    .navegacion-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 50px;
+        background-color: #222222;
+    }
+
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 50%;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+    .logo {
+        display: none;
+    }
+    .link-text {
+        display: none;
+        transition-duration: 1s;
+    }
+
+    .navbar-item img {
+        width: 35px;
+    }
+
+    .navbar-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 10px;
+        filter: grayscale(100%) opacity(0.7);
+        transition: 1.5s all ease;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .navegacion-nav {
+            top: 0;
+            width: 60px;
+            height: 100vh;
+            transition: 0.3s all ease;
+        }
+
+        .navegacion-nav:hover {
+            width: 100px;
+        }
+
+        .link-text:hover {
+            display: block;
+        }
+        /* .navegacion-nav:hover .link-text {
+            
+        } */
+        .navbar-container {
+            flex-direction: column;
+            justify-content: initial;
+            margin-left: 10px;
+        }
+        .navbar-item:last-child {
+            margin-top: auto;
+        }
+        .navbar-link {
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            justify-content: initial;
+            height: 50px;
+        }
+    }
+</style>

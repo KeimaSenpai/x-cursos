@@ -1,7 +1,10 @@
 * {
     margin: 0;
+    padding: 0;
+    outline: none;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+    box-sizing: border-box;
     text-decoration: none;
     text-transform: none;
     color: #ffffff;
@@ -12,23 +15,9 @@ body {
     color: #ffffff;
 }
 
-/*  ---------- Navegación --------- */
-.navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 15px;
-}
-
-.navegacion ul {
-    display: flex;
-    gap: 20px;
-}
-
-.glass {
-    background: #111111bb;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+main {
+    margin: 20px;
+    /* margin-left: 50px; */
 }
 
 /* ------------Estilos Generales-------------- */
@@ -37,4 +26,10 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        margin-left: 50px;
+    }
 }
