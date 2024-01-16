@@ -38,7 +38,7 @@
         position: fixed;
         bottom: 0;
         width: 100vw;
-        height: 50px;
+        height: 60px;
         background-color: rgba(29, 29, 29, 0.151);
         box-shadow: 8px 5px 20px 0px rgb(43 42 42 / 74%);
         backdrop-filter: blur(15px);
@@ -54,16 +54,17 @@
     }
 
     .navbar-item {
-        width: 100%;
+        margin-top: 13px;
+        height: 30px;
         transition: 0.5ms all ease;
     }
     .navbar-item:hover {
-        background: rgba(41, 41, 41, 0.205);
+        background: rgba(0, 0, 0, 0.274);
         border-radius: 5px;
         backdrop-filter: blur(15px);
     }
     .navbar-item img {
-        width: 40px;
+        width: 45px;
     }
     .logo {
         display: none;
@@ -104,6 +105,13 @@
             justify-content: initial;
             padding: 10px;
         }
+
+        .navbar-item {
+            margin-top: 0px;
+            width: 105%;
+            height: 50px;
+        }
+
         .navbar-item:last-child {
             margin-top: auto;
         }
